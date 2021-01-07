@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alabama</title>
+<style type="text/css">
+a:link {
+	color: #000000;
+}
+a:visited {
+	color: #000000;
+}
+a:hover {
+	color: #c00000;
+}
+a:active {
+	color: #000000;
+}
+</style>
+</head>
+
+<body>
+<center>
+<p style="text-align: center"><img src="Title Image.png" width="572" height="123" alt=""/></p></center>
+	
+	
+	<table width="100%" border="5"  align="center" cellpadding="10" cellspacing="0" bordercolor="c00000" bgcolor="B3B3B3">
+  <tbody>
+    <tr>
+      <td><table width="200" border="1" bordercolor="c00000" rules="rows" align="center" cellpadding="10" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="Index.html">Home</a></td>
+      <td style="text-align: center"><a href="Exports.html">Exports</a></td>
+      <td style="text-align: center"><a href="Football.html">Football</a></td>
+      <td style="text-align: center">Sample</td>
+	  </tr>
+  </tbody>
+</table></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+	
+	<p style="text-align: center; font-size: large; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;"><strong>Alabama Crimson Tide Football</strong></p>
+	
+	<center>
+	<script language="JavaScript1.2">
+
+/*
+Left-Right image slideshow Script-
+By Dynamic Drive (www.dynamicdrive.com)
+For full source code, terms of use, and 100's more scripts, visit http://dynamicdrive.com
+*/
+
+///////configure the below four variables to change the style of the slider///////
+//set the scrollerwidth and scrollerheight to the width/height of the LARGEST image in your slideshow!
+var scrollerwidth='533px'
+var scrollerheight='300px'
+var scrollerbgcolor='white'
+//3000 miliseconds=3 seconds
+var pausebetweenimages=3000
+
+
+//configure the below variable to change the images used in the slideshow. If you wish the images to be clickable, simply wrap the images with the appropriate <a> tag
+var slideimages=new Array()
+slideimages[0]='<a href="Football1.png"><img src="Football1thumb.png" border=0"></a>'
+slideimages[1]='<a href="Football2.png"><img src="Football2thumb.png" border=0"></a>'
+slideimages[2]='<a href="Football3.png"><img src="Football3thumb.png" border=0"></a>'
+//extend this list
+
+///////Do not edit pass this line///////////////////////
+     
+var ie=document.all
+var dom=document.getElementById
+
+if (slideimages.length>1)
+i=2
+else
+i=0
+
+function move1(whichlayer){
+tlayer=eval(whichlayer)
+if (tlayer.left>0&&tlayer.left<=5){
+tlayer.left=0
+setTimeout("move1(tlayer)",pausebetweenimages)
+setTimeout("move2(document.main.document.second)",pausebetweenimages)
+return
+}
+if (tlayer.left>=tlayer.document.width*-1){
+tlayer.left-=5
+setTimeout("move1(tlayer)",50)
+}
+else{
+tlayer.left=parseInt(scrollerwidth)+5
+tlayer.document.write(slideimages[i])
+tlayer.document.close()
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function move2(whichlayer){
+tlayer2=eval(whichlayer)
+if (tlayer2.left>0&&tlayer2.left<=5){
+tlayer2.left=0
+setTimeout("move2(tlayer2)",pausebetweenimages)
+setTimeout("move1(document.main.document.first)",pausebetweenimages)
+return
+}
+if (tlayer2.left>=tlayer2.document.width*-1){
+tlayer2.left-=5
+setTimeout("move2(tlayer2)",50)
+}
+else{
+tlayer2.left=parseInt(scrollerwidth)+5
+tlayer2.document.write(slideimages[i])
+tlayer2.document.close()
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function move3(whichdiv){
+tdiv=eval(whichdiv)
+if (parseInt(tdiv.style.left)>0&&parseInt(tdiv.style.left)<=5){
+tdiv.style.left=0+"px"
+setTimeout("move3(tdiv)",pausebetweenimages)
+setTimeout("move4(scrollerdiv2)",pausebetweenimages)
+return
+}
+if (parseInt(tdiv.style.left)>=tdiv.offsetWidth*-1){
+tdiv.style.left=parseInt(tdiv.style.left)-5+"px"
+setTimeout("move3(tdiv)",50)
+}
+else{
+tdiv.style.left=scrollerwidth
+tdiv.innerHTML=slideimages[i]
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function move4(whichdiv){
+tdiv2=eval(whichdiv)
+if (parseInt(tdiv2.style.left)>0&&parseInt(tdiv2.style.left)<=5){
+tdiv2.style.left=0+"px"
+setTimeout("move4(tdiv2)",pausebetweenimages)
+setTimeout("move3(scrollerdiv1)",pausebetweenimages)
+return
+}
+if (parseInt(tdiv2.style.left)>=tdiv2.offsetWidth*-1){
+tdiv2.style.left=parseInt(tdiv2.style.left)-5+"px"
+setTimeout("move4(scrollerdiv2)",50)
+}
+else{
+tdiv2.style.left=scrollerwidth
+tdiv2.innerHTML=slideimages[i]
+if (i==slideimages.length-1)
+i=0
+else
+i++
+}
+}
+
+function startscroll(){
+if (ie||dom){
+scrollerdiv1=ie? first2 : document.getElementById("first2")
+scrollerdiv2=ie? second2 : document.getElementById("second2")
+move3(scrollerdiv1)
+scrollerdiv2.style.left=scrollerwidth
+}
+else if (document.layers){
+document.main.visibility='show'
+move1(document.main.document.first)
+document.main.document.second.left=parseInt(scrollerwidth)+5
+document.main.document.second.visibility='show'
+}
+}
+
+window.onload=startscroll
+
+</script>
+
+
+
+
+<ilayer id="main" width=&{scrollerwidth}; height=&{scrollerheight}; bgColor=&{scrollerbgcolor}; visibility=hide>
+<layer id="first" left=1 top=0 width=&{scrollerwidth}; >
+<script language="JavaScript1.2">
+if (document.layers)
+document.write(slideimages[0])
+</script>
+</layer>
+<layer id="second" left=0 top=0 width=&{scrollerwidth}; visibility=hide>
+<script language="JavaScript1.2">
+if (document.layers)
+document.write(slideimages[1])
+</script>
+</layer>
+</ilayer>
+<script language="JavaScript1.2">
+if (ie||dom){
+document.writeln('<div id="main2" style="position:relative;width:'+scrollerwidth+';height:'+scrollerheight+';overflow:hidden;background-color:'+scrollerbgcolor+'">')
+document.writeln('<div style="position:absolute;width:'+scrollerwidth+';height:'+scrollerheight+';clip:rect(0 '+scrollerwidth+' '+scrollerheight+' 0);left:0px;top:0px">')
+document.writeln('<div id="first2" style="position:absolute;width:'+scrollerwidth+';left:1px;top:0px;">')
+document.write(slideimages[0])
+document.writeln('</div>')
+document.writeln('<div id="second2" style="position:absolute;width:'+scrollerwidth+';left:0px;top:0px">')
+document.write(slideimages[1])
+document.writeln('</div>')
+document.writeln('</div>')
+document.writeln('</div>')
+}
+</script>
+</center>
+	<br>
+	
+<p style="text-align: center">The Alabama Crimson Tide football program represents the University of Alabama (variously Alabama, UA, or Bama) in the sport of American football. The team competes in the Football Bowl Subdivision (FBS) of the National Collegiate Athletic Association (NCAA) and the Western Division of the Southeastern Conference (SEC). The team's current head coach is Nick Saban, who has led the Tide to five national championships over his tenure. The Crimson Tide is among the most storied and decorated football programs in NCAA history. Since beginning play in 1892, the program claims 17 national championships, including 12 wire-service (AP or Coaches) national titles in the poll-era, and five other titles before the poll-era. From 1958 to 1982, the team was led by Hall of Fame coach Paul &quot;Bear&quot; Bryant, who won six national titles with the program. Despite numerous national and conference championships, it was not until 2009 that an Alabama player received a Heisman Trophy, when running back Mark Ingram became the university's first winner. In 2015, Derrick Henry became the university's second Heisman winner. In 2020, DeVonta Smith became the third winner of the award. </p>
+<p style="text-align: center">Alabama has 928 official victories in NCAA Division I (an additional 21 victories were vacated, and eight victories and one tie were forfeited), has won 32 conference championships (4 Southern Conference and 28 SEC championships), and has made an NCAA-record 72 postseason bowl appearances. Other NCAA records include 24 winning streaks of ten games or more and 20 seasons with a 10–0 start. The program has 35 seasons with ten wins or more (plus one vacated) and has 43 bowl victories, both NCAA records. Alabama has completed ten undefeated seasons, nine of which were perfect seasons. The Crimson Tide leads the SEC West Division with 15 division titles and 13 appearances in the SEC Championship Game. Alabama holds a winning record against every current and former SEC school. The Associated Press (AP) ranks Alabama 4th in all-time final AP Poll appearances, with 57 through the 2019 season.</p>
+<p style="text-align: center"> Alabama plays its home games at Bryant–Denny Stadium, located on the campus in Tuscaloosa, Alabama. With a capacity of 101,821, Bryant-Denny is the 8th largest non-racing stadium in the world and the seventh largest stadium in the United States. </p>
+	<p style="text-align: center; font-size: small;">All text on this page was found <a href="https://en.wikipedia.org/wiki/Alabama_Crimson_Tide_football">here.</a></p>
+</body>
+</html>
