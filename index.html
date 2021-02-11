@@ -75,7 +75,7 @@
 			list-style: none;
 		}
 		
-		#sidemenu ul li {
+		#sidemenu ul li > a {
 			margin: 0;
 			max-width: calc(100% - 2rem);
 			text-align: center;
@@ -86,11 +86,11 @@
 			transition: .25s;
 		}
 
-		#sidemenu ul li:hover {
+		#sidemenu ul li > a:hover {
 			background: rgba(104, 251, 242, 0.15);
 		}
 
-		#sidemenu ul li:last-child {
+		#sidemenu ul li > a:last-child {
 			border-bottom: 3px solid white;
 		}
 
@@ -170,6 +170,11 @@
 			color: #68FBF2;
 			-webkit-text-stroke: 5px #0B0C10;
 		}
+		
+		main {
+			padding-left: 10vw;
+			padding-right: 10vw;
+		}
 
 	</style>
 </head>
@@ -179,10 +184,18 @@
 	<aside id="sidemenu">
 
 		<ul>
-			<li>Home</li>
-			<li>test</li>
-			<li>test</li>
-			<li>test</li>
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li>
+				<a href="#">About</a>
+			</li>
+			<li>
+				<a href="#">Images</a>
+			</li>
+			<li>
+				<a href="#">Sources</a>
+			</li>
 		</ul>
 
 	</aside>
@@ -192,34 +205,33 @@
 		<span></span>
 		<span></span>
 	</button>
-
-	<!-- <center>
-		<p style="text-align: center"><img src="TitleImg.png" width="1175" height="164" alt="" /></p>
-	</center> -->
 	
-	<h1 id="title">Henrietta Lacks</h1>
+	<main>
+		<h1 id="title">Henrietta Lacks</h1>
 
-	<br>
+		<br>
 
 
-	<p
-		style="text-align: center; font-size: large; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;">
-		<strong>Henrietta Lacks</strong></p>
+		<p
+			style="text-align: center; font-size: large; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;">
+			<strong>Henrietta Lacks</strong></p>
 
-	<br>
-	<p style="text-align:center"> <a href="Henrietta Lacks.jpg"><img src="Henrietta Lacks Thumb.jpg" alt="" width="262"
-				height="300" /></a></p>
-	<br>
+		<br>
+		<p style="text-align:center"> <a href="Henrietta Lacks.jpg"><img src="Henrietta Lacks Thumb.jpg" alt="" width="262"
+					height="300" /></a></p>
+		<br>
 
-	<p style="text-align: center">Henrietta Lacks (born Loretta Pleasant; August 1, 1920 – October 4, 1951) was an
-		African-American woman whose cancer cells are the source of the HeLa cell line, the first immortalized human
-		cell line and one of the most important cell lines in medical research. An immortalized cell line reproduces
-		indefinitely under specific conditions, and the HeLa cell line continues to be a source of invaluable medical
-		data to the present day.</p>
+		<p style="text-align: center">Henrietta Lacks (born Loretta Pleasant; August 1, 1920 – October 4, 1951) was an
+			African-American woman whose cancer cells are the source of the HeLa cell line, the first immortalized human
+			cell line and one of the most important cell lines in medical research. An immortalized cell line reproduces
+			indefinitely under specific conditions, and the HeLa cell line continues to be a source of invaluable medical
+			data to the present day.</p>
 
-	<p style="text-align: center; font-size: small;">All text on this page was found <a
-			href="https://en.wikipedia.org/wiki/Alabama">here.</a></p>
+		<p style="text-align: center; font-size: small;">All text on this page was found <a
+				href="https://en.wikipedia.org/wiki/Alabama">here.</a></p>
 
+	</main>
+		
 </body>
 
 </html>
