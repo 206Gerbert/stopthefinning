@@ -1,134 +1,224 @@
 <!doctype html>
 <html>
+
 <head>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
+		$(document).ready(() => {
+			$('.toggleSidemenu').click(function() {
+				$('#sidemenu').toggleClass('is-active');
+			});
+		});
+	</script>
 
-jQuery(function(){ // on DOM load
- menu1 = new sidetogglemenu({ // initialize first menu example
-  id: 'menu1',
-  pushcontent: true // <- No comma after last option!
- })
-})
+	<meta charset="utf-8">
+	<title>Henrietta Lacks</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+	<style>
+		<!--
+		body {
+			background-image: url();
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			background-color: #1F2833;
+		}
 
-</script>
-	
-	<link rel="stylesheet" href="sidetogglemenu.css" />
+		//
+		-->
+	</style>
+	<style type="text/css">
+		a:link {
+			color: #C5C6C7;
+		}
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+		a:visited {
+			color: #C5C6C7;
+		}
 
-<script src="sidetogglemenu.js">
+		a:hover {
+			color: #66fcf1;
+		}
 
-/*
-* Responsive Side Toggle Menu(c) Dynamic Drive (www.dynamicdrive.com)
-* Last updated: July 21, 15'
-* Visit http://www.dynamicdrive.com/ for this script and 100s more.
-*/
+		a:active {
+			color: #c5c6c7;
+			text-align: center;
+		}
 
-</script>
+		body,
+		td,
+		th {
+			color: #C5C6C7;
+		}
+	</style>
+	<style>
+		
+		#sidemenu {
+			position: fixed;
+			width: calc(20vw + 50px);
+			background: rgba(0, 0, 0, 0.5);
+			backdrop-filter: blur(5px);
+			box-shadow: 3px 3px 12px rgba(0, 0, 0, calc(1 / 3));
+			color: whitesmoke;
+			height: 100vh;
+			top: 0;
+			left: -30vw;
+			transition: .25s;
+		}
 
-<script>
+		#sidemenu ul {
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			list-style: none;
+		}
+		
+		#sidemenu ul li {
+			margin: 0;
+			max-width: calc(100% - 2rem);
+			text-align: center;
+			padding: 1rem 2rem;
+			border-top: 3px solid white;
+			cursor: pointer;
+			background: transparent;
+			transition: .25s;
+		}
 
-jQuery(function(){ // on DOM load
-	menu1 = new sidetogglemenu({  // initialize first menu example
-		id: 'togglemenu1',
-		marginoffset: 10,
-		downarrowsrc: 'toggledown.png'
-	})
+		#sidemenu ul li:hover {
+			background: rgba(104, 251, 242, 0.15);
+		}
 
-	menu2 = new sidetogglemenu({  // initialize second menu example
-		id: 'togglemenu2',
-		position: 'right',
-		source: 'togglemenu.txt',
-		revealamt: -5
-	})
-})
+		#sidemenu ul li:last-child {
+			border-bottom: 3px solid white;
+		}
 
-</script>
-	
-<meta charset="utf-8">
-<title>Henrietta Lacks</title>
-<style>
-<!--
-body {
-    background-image: url();
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #1F2833;
-}
-//-->
-</style>
-<style type="text/css">
-a:link {
-    color: #C5C6C7;
-}
-a:visited {
-    color: #C5C6C7;
-}
-a:hover {
-    color: #66fcf1;
-}
-a:active {
-    color: #c5c6c7;
-    text-align: center;
-}
-body,td,th {
-    color: #C5C6C7;
-}
-</style>
+		#sidemenu.is-active {
+			left: 0;
+		}
+		
+		#toggleSidemenu {
+			position: fixed;
+			top: 1rem;
+			left: 1rem;
+			transition: .25s;
+			color: whitesmoke;
+			background: rgba(0, 0, 0, 0.5);
+			backdrop-filter: blur(5px);
+			border: 2px solid rgba(0, 0, 0, 0.75);
+			box-shadow: 3px 3px 12px rgba(0, 0, 0, calc(1 / 3));
+			height: 2.5rem;
+			width: calc(2rem + 18px);
+			font-size: 1.25rem;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		
+		#sidemenu.is-active + #toggleSidemenu {
+			left: calc(20vw + 50px + 1rem);
+		}
+
+		#sidemenu + #toggleSidemenu > span {
+			background-color: currentColor;
+			display: block;
+			height: 3px;
+			left: calc(50% - 9px);
+			position: absolute;
+			transform-origin: center;
+			transition-duration: 86ms;
+			transition-property: background-color,opacity,transform;
+			transition-timing-function: ease-out;
+			border-radius: 4px;
+			width: 18px;
+			transition: .25s;
+		}
+
+		#sidemenu + #toggleSidemenu > span:nth-child(1) {
+			top: calc(50% - 8.5px);
+		}
+
+		#sidemenu + #toggleSidemenu > span:nth-child(2) {
+			top: calc(50% - 1.5px);
+		}
+
+		#sidemenu + #toggleSidemenu > span:nth-child(3) {
+			top: calc(50% + 5.5px);
+		}
+
+		#sidemenu.is-active + #toggleSidemenu > span:nth-child(1) {
+			top: calc(50% - 1px);
+			transform: rotate(45deg);
+		} 
+
+		#sidemenu.is-active + #toggleSidemenu > span:nth-child(2) {
+			top: calc(50% - 1px);
+			transform: rotate(45deg);
+		} 
+
+		#sidemenu.is-active + #toggleSidemenu > span:nth-child(3) {
+			top: calc(50% - 1px);
+			transform: rotate(-45deg);
+		} 
+
+		#title {
+			width: 100%;
+			text-align: center; 
+			font-size: 10em; 
+			font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;
+			margin-top: 2rem;
+			color: #68FBF2;
+			-webkit-text-stroke: 5px #0B0C10;
+		}
+
+	</style>
 </head>
 
 <body>
-	
-	<button onClick="menu1.toggle();" class="sideviewtoggle">Toggle Menu 1</button>
 
-<div id="togglemenu1" class="sidetogglemenu">
+	<aside id="sidemenu">
 
-	<ul class="mainnav">
-	<li><a href="http://www.dynamicdrive.com/"><i class="fa fa-bolt"></i> Dynamic Drive</a></li>
-	<li><a href="http://www.dynamicdrive.com/forums/"><i class="fa fa-comment-o"></i> Help Forums</a></li>
-	<li><a href="http://tools.dynamicdrive.com/button/"><i class="fa fa-search"></i> Search</a></li>
-	<li><a href="http://tools.dynamicdrive.com/imageoptimizer/"><i class="fa fa-gears"></i> Gif Optimizer</a></li>		<li><a href="http://tools.dynamicdrive.com/favicon/"><i class="fa fa-gears"></i> Favicon Creator</a></li>
-	<li><a href="http://tools.dynamicdrive.com/button/"><i class="fa fa-gears"></i> Button Maker</a></li>
+		<ul>
+			<li>test</li>
+			<li>test</li>
+			<li>test</li>
+			<li>test</li>
+		</ul>
+
+	</aside>
+
+	<button id="toggleSidemenu" class="toggleSidemenu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+
+	<!-- <center>
+		<p style="text-align: center"><img src="TitleImg.png" width="1175" height="164" alt="" /></p>
+	</center> -->
 	
-	<p style="padding:10px">
-	This menu's markup is defined inline on the page. With the setting <code>pushcontent: true</code>, the menu shifts the rest of the page's content to make room for itself when revealed.
-	</p>
-		</div>
-	
-<center>
-<p style="text-align: center"><img src="TitleImg.png" width="1175" height="164" alt=""/></p>
-</center>
-	
-	
-	
-<br>
-	
-	<p style="text-align: center; font-size: large; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;"><strong>Henrietta Lacks</strong></p>
-	
+	<h1 id="title">Henrietta Lacks</h1>
+
 	<br>
-<p style="text-align:center"> <a href="../Home.png"><img src="../Homethumb.png" alt="" width="485" height="300"/></a></p>
+
+
+	<p
+		style="text-align: center; font-size: large; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;">
+		<strong>Henrietta Lacks</strong></p>
+
 	<br>
-	
-<p style="text-align: center">Henrietta Lacks (born Loretta Pleasant; August 1, 1920 – October 4, 1951) was an African-American woman whose cancer cells are the source of the HeLa cell line, the first immortalized human cell line and one of the most important cell lines in medical research. An immortalized cell line reproduces indefinitely under specific conditions, and the HeLa cell line continues to be a source of invaluable medical data to the present day.</p>
+	<p style="text-align:center"> <a href="../Home.png"><img src="../Homethumb.png" alt="" width="485"
+				height="300" /></a></p>
+	<br>
 
-<p style="text-align: center; font-size: small;">All text on this page was found <a href="https://en.wikipedia.org/wiki/Alabama">here.</a></p>
+	<p style="text-align: center">Henrietta Lacks (born Loretta Pleasant; August 1, 1920 – October 4, 1951) was an
+		African-American woman whose cancer cells are the source of the HeLa cell line, the first immortalized human
+		cell line and one of the most important cell lines in medical research. An immortalized cell line reproduces
+		indefinitely under specific conditions, and the HeLa cell line continues to be a source of invaluable medical
+		data to the present day.</p>
 
-	
-	<div id="menu1" class="sidetogglemenu">
+	<p style="text-align: center; font-size: small;">All text on this page was found <a
+			href="https://en.wikipedia.org/wiki/Alabama">here.</a></p>
 
-<ul>
-<li><a href="http://www.dynamicdrive.com/">Dynamic Drive</a></li>
-<li><a href="http://www.dynamicdrive.com/style/">CSS Library</a></li>
-<li><a href="http://www.dynamicdrive.com/forums/">Forums</a></li>
-<li><a href="http://tools.dynamicdrive.com/imageoptimizer/">Gif Optimizer</a></li>
-<li><a href="http://tools.dynamicdrive.com/favicon/">Favicon Creator</a></li>
-<li><a href="http://tools.dynamicdrive.com/button/">Button Maker</a></li>
-</ul>
-
-//some other menu contents
-
-</div>
-	
 </body>
+
 </html>
