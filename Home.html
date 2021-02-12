@@ -51,10 +51,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 		}
 	</style>
 	<style>
-		
 		@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 		body{
 			font-family: "Roboto Slab", sarif !important;
+		}
+		#youtubeVideo {
+ 			 margin-left: 50%;
+			transform:translateX(-50%);
 		}
 		
 		#sidemenu {
@@ -225,239 +228,32 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 	
 	<main>
 		<h1 id="title">Henrietta Lacks</h1>
-
-		<hr size="5" color="#68FBF2">
+        
+<hr size="5" color="#68FBF2">
 
 		
 			<p style="text-align: center; font-size: x-large; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;">
-			<strong>The Legacy of Henrietta Lacks</strong></p>
+			<strong>Henrietta Lacks</strong></p>
 
 		<br>
-		<center>
-	<script language="JavaScript1.2">
-
-/*
-Left-Right image slideshow Script-
-By Dynamic Drive (www.dynamicdrive.com)
-For full source code, terms of use, and 100's more scripts, visit http://dynamicdrive.com
-*/
-
-///////configure the below four variables to change the style of the slider///////
-//set the scrollerwidth and scrollerheight to the width/height of the LARGEST image in your slideshow!
-var scrollerwidth='438px'
-var scrollerheight='300px'
-var scrollerbgcolor='transparent'
-//3000 miliseconds=3 seconds
-var pausebetweenimages=3000
-
-
-//configure the below variable to change the images used in the slideshow. If you wish the images to be clickable, simply wrap the images with the appropriate <a> tag
-var slideimages=new Array()
-slideimages[0]='<a href="HOF.jpg"><img src="HOF Thumb.jpg" border=0"></a>'
-slideimages[1]='<a href="Sign.jpg"><img src="Sign Thumb.jpg" border=0"></a>'
-slideimages[2]='<a href="Lacks Road.jpg"><img src="Lacks Road Thumb.jpg" border=0"></a>'
-//extend this list
-
-///////Do not edit pass this line///////////////////////
-     
-var ie=document.all
-var dom=document.getElementById
-
-if (slideimages.length>1)
-i=2
-else
-i=0
-
-function move1(whichlayer){
-tlayer=eval(whichlayer)
-if (tlayer.left>0&&tlayer.left<=5){
-tlayer.left=0
-setTimeout("move1(tlayer)",pausebetweenimages)
-setTimeout("move2(document.main.document.second)",pausebetweenimages)
-return
-}
-if (tlayer.left>=tlayer.document.width*-1){
-tlayer.left-=5
-setTimeout("move1(tlayer)",50)
-}
-else{
-tlayer.left=parseInt(scrollerwidth)+5
-tlayer.document.write(slideimages[i])
-tlayer.document.close()
-if (i==slideimages.length-1)
-i=0
-else
-i++
-}
-}
-
-function move2(whichlayer){
-tlayer2=eval(whichlayer)
-if (tlayer2.left>0&&tlayer2.left<=5){
-tlayer2.left=0
-setTimeout("move2(tlayer2)",pausebetweenimages)
-setTimeout("move1(document.main.document.first)",pausebetweenimages)
-return
-}
-if (tlayer2.left>=tlayer2.document.width*-1){
-tlayer2.left-=5
-setTimeout("move2(tlayer2)",50)
-}
-else{
-tlayer2.left=parseInt(scrollerwidth)+5
-tlayer2.document.write(slideimages[i])
-tlayer2.document.close()
-if (i==slideimages.length-1)
-i=0
-else
-i++
-}
-}
-
-function move3(whichdiv){
-tdiv=eval(whichdiv)
-if (parseInt(tdiv.style.left)>0&&parseInt(tdiv.style.left)<=5){
-tdiv.style.left=0+"px"
-setTimeout("move3(tdiv)",pausebetweenimages)
-setTimeout("move4(scrollerdiv2)",pausebetweenimages)
-return
-}
-if (parseInt(tdiv.style.left)>=tdiv.offsetWidth*-1){
-tdiv.style.left=parseInt(tdiv.style.left)-5+"px"
-setTimeout("move3(tdiv)",50)
-}
-else{
-tdiv.style.left=scrollerwidth
-tdiv.innerHTML=slideimages[i]
-if (i==slideimages.length-1)
-i=0
-else
-i++
-}
-}
-
-function move4(whichdiv){
-tdiv2=eval(whichdiv)
-if (parseInt(tdiv2.style.left)>0&&parseInt(tdiv2.style.left)<=5){
-tdiv2.style.left=0+"px"
-setTimeout("move4(tdiv2)",pausebetweenimages)
-setTimeout("move3(scrollerdiv1)",pausebetweenimages)
-return
-}
-if (parseInt(tdiv2.style.left)>=tdiv2.offsetWidth*-1){
-tdiv2.style.left=parseInt(tdiv2.style.left)-5+"px"
-setTimeout("move4(scrollerdiv2)",50)
-}
-else{
-tdiv2.style.left=scrollerwidth
-tdiv2.innerHTML=slideimages[i]
-if (i==slideimages.length-1)
-i=0
-else
-i++
-}
-}
-
-function startscroll(){
-if (ie||dom){
-scrollerdiv1=ie? first2 : document.getElementById("first2")
-scrollerdiv2=ie? second2 : document.getElementById("second2")
-move3(scrollerdiv1)
-scrollerdiv2.style.left=scrollerwidth
-}
-else if (document.layers){
-document.main.visibility='show'
-move1(document.main.document.first)
-document.main.document.second.left=parseInt(scrollerwidth)+5
-document.main.document.second.visibility='show'
-}
-}
-
-window.onload=startscroll
-
-</script>
-
-
-
-
-<ilayer id="main" width=&{scrollerwidth}; height=&{scrollerheight}; bgColor=&{scrollerbgcolor}; visibility=hide>
-<layer id="first" left=1 top=0 width=&{scrollerwidth}; >
-<script language="JavaScript1.2">
-if (document.layers)
-document.write(slideimages[0])
-</script>
-</layer>
-<layer id="second" left=0 top=0 width=&{scrollerwidth}; visibility=hide>
-<script language="JavaScript1.2">
-if (document.layers)
-document.write(slideimages[1])
-</script>
-</layer>
-</ilayer>
-<script language="JavaScript1.2">
-if (ie||dom){
-document.writeln('<div id="main2" style="position:relative;width:'+scrollerwidth+';height:'+scrollerheight+';overflow:hidden;background-color:'+scrollerbgcolor+'">')
-document.writeln('<div style="position:absolute;width:'+scrollerwidth+';height:'+scrollerheight+';clip:rect(0 '+scrollerwidth+' '+scrollerheight+' 0);left:0px;top:0px">')
-document.writeln('<div id="first2" style="position:absolute;width:'+scrollerwidth+';left:1px;top:0px;">')
-document.write(slideimages[0])
-document.writeln('</div>')
-document.writeln('<div id="second2" style="position:absolute;width:'+scrollerwidth+';left:0px;top:0px">')
-document.write(slideimages[1])
-document.writeln('</div>')
-document.writeln('</div>')
-document.writeln('</div>')
-}
-</script>
-</center>
+		
+		<iframe id="youtubeVideo" width="560" height="315" src="https://www.youtube.com/embed/SPLSp7Tf3bw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
 		<br>
 
-			<br>
-			<br>
-			<p style="text-align: center; font-size: medium;">
-In 1996, Morehouse School of Medicine held its first annual HeLa Women's Health Conference. Led by physician Roland Pattillo, the conference is held to give recognition to Henrietta Lacks, her cell line, and "the valuable contribution made by African Americans to medical research and clinical practice". The mayor of Atlanta declared the date of the first conference, October 11, 1996, "Henrietta Lacks Day".
+		<p style="text-align: center; font-size: medium;">Henrietta Lacks (born Loretta Pleasant; August 1, 1920 – October 4, 1951) was an
+			African-American woman whose cancer cells are the source of the HeLa cell line, the first immortalized human
+			cell line and one of the most important cell lines in medical research. An immortalized cell line reproduces
+			indefinitely under specific conditions, and the HeLa cell line continues to be a source of invaluable medical
+			data to the present day.</p>
 
-				<br>
-				<br>
-				
-Lacks's contributions continue to be celebrated at yearly events in Turner Station. At one such event in 1997, then-U.S. Congressman from Maryland, Robert Ehrlich, presented a congressional resolution recognizing Lacks and her contributions to medical science and research.
-				
-				<br>
-				<br>
-
-In 2010, the Johns Hopkins Institute for Clinical and Translational Research established the annual Henrietta Lacks Memorial Lecture Series to honor Henrietta Lacks and the global impact of HeLa cells on medicine and research. During the 2018 lectures, the University announced the naming of a new building on the medical campus for Lacks.
-				
-				<br>
-				<br>
-
-In 2011, Morgan State University in Baltimore granted Lacks a posthumous honorary doctorate in public service. Also in 2011, the Evergreen School District in Vancouver, Washington, named their new high school focused on medical careers the Henrietta Lacks Health and Bioscience High School, becoming the first organization to memorialize her publicly by naming a school in her honor.
-				
-				<br>
-				<br>
-
-In 2014, Lacks was inducted into the Maryland Women's Hall of Fame. In 2017, a minor planet in the main asteroid belt was named "359426 Lacks" in her honor.
-				
-				<br>
-				<br>
-
-In 2018, the New York Times published a belated obituary for her, as part of the Overlooked history project. Also in 2018, the National Portrait Gallery and the National Museum of African-American History and Culture jointly announced the accession of a portrait of Lacks by Kadir Nelson.
-				
-				<br>
-				<br>
-
-On October 6, 2018, Johns Hopkins University announced plans to name a research building in honor of Lacks.[57] The announcement was made at the 9th annual Henrietta Lacks Memorial Lecture in the Turner Auditorium in East Baltimore by Johns Hopkins University President Ronald J. Daniels and Paul B. Rothman, CEO of Johns Hopkins Medicine and dean of the medical faculty of the Johns Hopkins University School of Medicine, surrounded by several of Lacks's descendants. “Through her life and her immortal cells, Henrietta Lacks made an immeasurable impact on science and medicine that has touched countless lives around the world,” Daniels said. “This building will stand as a testament to her transformative impact on scientific discovery and the ethics that must undergird its pursuit. We at Johns Hopkins are profoundly grateful to the Lacks family for their partnership as we continue to learn from Mrs. Lacks’s life and to honor her enduring legacy.” The building will adjoin the Berman Institute of Bioethics’ Deering Hall, located at the corner of Ashland and Rutland Avenues and "will support programs that enhance participation and partnership with members of the community in research that can benefit the community, as well as extend the opportunities to further study and promote research ethics and community engagement in research through an expansion of the Berman Institute and its work."
-				
-				<br>
-				<br>
-
-In 2020, Lacks was inducted into the National Women's Hall of Fame.
-				
-				<br>
-				<br>
-
-In 2021, the Henrietta Lacks Enhancing Cancer Research Act of 2019 became law; it states the Government Accountability Office must complete a study about barriers to participation that exist in cancer clinical trials that are federally funded for populations that have been underrepresented in such trials.
-				<br>
+		<br>
+		
 		<p style="text-align: center; font-size: small;">All text on this page can be found <a
 				href="https://en.wikipedia.org/wiki/Henrietta_Lacks">here.</a></p>
+		<p style="text-align: center; font-size: small;">Original video can be found <a
+				href="https://www.youtube.com/watch?reload=9&v=SPLSp7Tf3bw">here.</a></p>
+		
 
 	</main>
 		
