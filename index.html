@@ -31,7 +31,9 @@
       width: calc(33.3333333333% - 1.5rem);
       border-radius: 10px;
       transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
       transition: all .5s ease;
+      -webkit-transition: all .5s ease;
       display: grid;
       grid-auto-rows: minmax(0, 1fr);
       margin: .75rem;
@@ -41,6 +43,7 @@
 
     .thecard:hover {
       transform: scale(1.05);
+      -webkit-transform: scale(1.05);
       box-shadow: 0px 0px 12 rgba(0, 0, 0, 0.75);
     }
 
@@ -48,6 +51,9 @@
       animation-duration: 0s;
       animation-timing-function: linear;
       transform: rotateY(180deg);
+      -webkit-animation-duration: 0s;
+      -webkit-animation-timing-function: linear;
+      -webkit-transform: rotateY(180deg);
     }
 
     .thefront {
@@ -135,6 +141,7 @@
     .img:hover {
       transform: scale(1.05);
       box-shadow: 0px 0px 12 rgba(0, 0, 0, 0.75);
+      -webkit-transform: scale(1.05);
     }
 
     @media only screen and (max-width: 640px) {
@@ -193,7 +200,7 @@
 
       <div class="theback">
         <h1>They are caught, have their fins taken, and then thrown back!</h1>
-        <p>According to this source, ././././.</p>
+        <p>Sample Text</p>
         <p> This information was found <a href="https://www.hsi.org/issues/shark-finning/">here</a>.</p>
       </div>
 
