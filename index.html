@@ -6,6 +6,24 @@
   <title>Save The Sharks!</title>
   <style>
     body {
+      -webkit-background-image: url(test.jpg);
+      -webkit-background-repeat: repeat;
+      -webkit-background-size: 100% cover;
+      -webkit-margin: 0;
+      -webkit-padding-left: 1.5rem;
+      -webkit-padding-top: 1.5rem;
+      -moz-background-image: url(test.jpg);
+      -moz-background-repeat: repeat;
+      -moz-background-size: 100% cover;
+      -moz-margin: 0;
+      -moz-padding-left: 1.5rem;
+      -moz-padding-top: 1.5rem;
+      -ms-background-image: url(test.jpg);
+      -ms-background-repeat: repeat;
+      -ms-background-size: 100% cover;
+      -ms-margin: 0;
+      -ms-padding-left: 1.5rem;
+      -ms-padding-top: 1.5rem;
       background-image: url(test.jpg);
       background-repeat: repeat;
       background-size: 100% cover;
@@ -15,6 +33,27 @@
     }
 
     .maincontainer {
+      -webkit-width: 100%;
+      -webkit-display: flex;
+      -webkit-flex-wrap: wrap;
+      -webkit-flex-direction: row;
+      -webkit-align-content: stretch;
+      -webkit-margin-left: -.75rem;
+      -webkit-margin-top: -.75rem;
+      -moz-width: 100%;
+      -moz-display: flex;
+      -moz-flex-wrap: wrap;
+      -moz-flex-direction: row;
+      -moz-align-content: stretch;
+      -moz-margin-left: -.75rem;
+      -moz-margin-top: -.75rem;
+      -ms-width: 100%;
+      -ms-display: flex;
+      -ms-flex-wrap: wrap;
+      -ms-flex-direction: row;
+      -ms-align-content: stretch;
+      -ms-margin-left: -.75rem;
+      -ms-margin-top: -.75rem;
       width: 100%;
       display: flex;
       flex-wrap: wrap;
@@ -25,15 +64,49 @@
     }
 
     .thecard {
+      -webkit-position: relative;
+      -webkit-top: 0;
+      -webkit-left: 0;
+      -webkit-width: calc(33.3333333333% - 1.5rem);
+      -webkit-border-radius: 10px;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transition: all .5s ease;
+      -webkit-display: grid;
+      -webkit-grid-auto-rows: minmax(0, 1fr);
+      -webkit-margin: .75rem;
+      -webkit-box-shadow: 0 0px 9px rgba(0, 0, 0, calc(2/3));
+      -webkit-cursor: pointer;
+      -moz-position: relative;
+      -moz-top: 0;
+      -moz-left: 0;
+      -moz-width: calc(33.3333333333% - 1.5rem);
+      -moz-border-radius: 10px;
+      -moz-transform-style: preserve-3d;
+      -moz-transition: all .5s ease;
+      -moz-display: grid;
+      -moz-grid-auto-rows: minmax(0, 1fr);
+      -moz-margin: .75rem;
+      -moz-box-shadow: 0 0px 9px rgba(0, 0, 0, calc(2/3));
+      -moz-cursor: pointer;
+      -ms-position: relative;
+      -ms-top: 0;
+      -ms-left: 0;
+      -ms-width: calc(33.3333333333% - 1.5rem);
+      -ms-border-radius: 10px;
+      -ms-transform-style: preserve-3d;
+      -ms-transition: all .5s ease;
+      -ms-display: grid;
+      -ms-grid-auto-rows: minmax(0, 1fr);
+      -ms-margin: .75rem;
+      -ms-box-shadow: 0 0px 9px rgba(0, 0, 0, calc(2/3));
+      -ms-cursor: pointer;
       position: relative;
       top: 0;
       left: 0;
       width: calc(33.3333333333% - 1.5rem);
       border-radius: 10px;
       transform-style: preserve-3d;
-      -webkit-transform-style: preserve-3d;
       transition: all .5s ease;
-      -webkit-transition: all .5s ease;
       display: grid;
       grid-auto-rows: minmax(0, 1fr);
       margin: .75rem;
@@ -42,21 +115,80 @@
     }
 
     .thecard:hover {
-      transform: scale(1.05);
       -webkit-transform: scale(1.05);
+      -webkit-box-shadow: 0px 0px 12 rgba(0, 0, 0, 0.75);
+      -moz-transform: scale(1.05);
+      -moz-box-shadow: 0px 0px 12 rgba(0, 0, 0, 0.75);
+      -ms-transform: scale(1.05);
+      -ms-box-shadow: 0px 0px 12 rgba(0, 0, 0, 0.75);
+      transform: scale(1.05);
       box-shadow: 0px 0px 12 rgba(0, 0, 0, 0.75);
     }
 
     .thecard.is-active {
-      animation-duration: 0s;
-      animation-timing-function: linear;
-      transform: rotateY(180deg);
       -webkit-animation-duration: 0s;
       -webkit-animation-timing-function: linear;
       -webkit-transform: rotateY(180deg);
+      -moz-animation-duration: 0s;
+      -moz-animation-timing-function: linear;
+      -moz-transform: rotateY(180deg);
+      -ms-animation-duration: 0s;
+      -ms-animation-timing-function: linear;
+      -ms-transform: rotateY(180deg);
+      animation-duration: 0s;
+      animation-timing-function: linear;
+      transform: rotateY(180deg);
     }
 
     .thefront {
+      -webkit-position: relative;
+      -webkit-top: 0;
+      -webkit-left: 0;
+      -webkit-width: 100%;
+      -webkit-height: 100%;
+      -webkit-border-radius: 10px;
+      -webkit-backface-visibility: hidden;
+      -webkit-overflow: hidden;
+      -webkit-background: #ffc728;
+      -webkit-color: #000;
+      -webkit-display: flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center;
+      -webkit-grid-row-start: 1;
+      -webkit-grid-column-start: 1;
+      -webkit-text-align: center;
+      -moz-position: relative;
+      -moz-top: 0;
+      -moz-left: 0;
+      -moz-width: 100%;
+      -moz-height: 100%;
+      -moz-border-radius: 10px;
+      -moz-backface-visibility: hidden;
+      -moz-overflow: hidden;
+      -moz-background: #ffc728;
+      -moz-color: #000;
+      -moz-display: flex;
+      -moz-align-items: center;
+      -moz-justify-content: center;
+      -moz-grid-row-start: 1;
+      -moz-grid-column-start: 1;
+      -moz-text-align: center;
+      -ms-position: relative;
+      -ms-top: 0;
+      -ms-left: 0;
+      -ms-width: 100%;
+      -ms-height: 100%;
+      -ms-border-radius: 10px;
+      -ms-backface-visibility: hidden;
+      -ms-overflow: hidden;
+      -ms-background: #ffc728;
+      -ms-color: #000;
+      -ms-display: flex;
+      -ms-align-items: center;
+      -ms-justify-content: center;
+      -ms-grid-row-start: 1;
+      -ms-grid-column-start: 1;
+      -ms-text-align: center;
       position: relative;
       top: 0;
       left: 0;
@@ -76,6 +208,51 @@
     }
 
     .theback {
+      \position: relative;
+      -webkit-top: 0;
+      -webkit-left: 0;
+      -webkit-width: 100%;
+      -webkit-height: 100%;
+      -webkit-border-radius: 10px;
+      -webkit-backface-visibility: hidden;
+      -webkit-overflow: hidden;
+      -webkit-background: #fafafa;
+      -webkit-color: #333;
+      -webkit-text-align: center;
+      -webkit-transform: rotateY(180deg);
+      -webkit-grid-row-start: 1;
+      -webkit-grid-column-start: 1;
+      -webkit-z-index: 2;
+      -moz-position: relative;
+      -moz-top: 0;
+      -moz-left: 0;
+      -moz-width: 100%;
+      -moz-height: 100%;
+      -moz-border-radius: 10px;
+      -moz-backface-visibility: hidden;
+      -moz-overflow: hidden;
+      -moz-background: #fafafa;
+      -moz-color: #333;
+      -moz-text-align: center;
+      -moz-transform: rotateY(180deg);
+      -moz-grid-row-start: 1;
+      -moz-grid-column-start: 1;
+      -moz-z-index: 2;
+      -ms-position: relative;
+      -ms-top: 0;
+      -ms-left: 0;
+      -ms-width: 100%;
+      -ms-height: 100%;
+      -ms-border-radius: 10px;
+      -ms-backface-visibility: hidden;
+      -ms-overflow: hidden;
+      -ms-background: #fafafa;
+      -ms-color: #333;
+      -ms-text-align: center;
+      -ms-transform: rotateY(180deg);
+      -ms-grid-row-start: 1;
+      -ms-grid-column-start: 1;
+      -ms-z-index: 2;
       position: relative;
       top: 0;
       left: 0;
@@ -95,6 +272,21 @@
 
 
     .thefront-h1 {
+      -webkit-font-family: 'zilla slab', sans-serif;
+      -webkit-padding: 30px;
+      -webkit-font-weight: bold;
+      -webkit-font-size: 60px;
+      -webkit-text-align: center;
+      -moz-font-family: 'zilla slab', sans-serif;
+      -moz-padding: 30px;
+      -moz-font-weight: bold;
+      -moz-font-size: 60px;
+      -moz-text-align: center;
+      -ms-font-family: 'zilla slab', sans-serif;
+      -ms-padding: 30px;
+      -ms-font-weight: bold;
+      -ms-font-size: 60px;
+      -ms-text-align: center;
       font-family: 'zilla slab', sans-serif;
       padding: 30px;
       font-weight: bold;
@@ -103,6 +295,18 @@
     }
 
     .theback h1 {
+      -webkit-font-family: 'zilla slab', sans-serif;
+      -webkit-padding: 30px 30px 0 30px;
+      -webkit-font-weight: bold;
+      -webkit-font-size: 24px;
+      -moz-font-family: 'zilla slab', sans-serif;
+      -moz-padding: 30px 30px 0 30px;
+      -moz-font-weight: bold;
+      -moz-font-size: 24px;
+      -ms-font-family: 'zilla slab', sans-serif;
+      -ms-padding: 30px 30px 0 30px;
+      -ms-font-weight: bold;
+      -ms-font-size: 24px;
       font-family: 'zilla slab', sans-serif;
       padding: 30px 30px 0 30px;
       font-weight: bold;
@@ -110,6 +314,21 @@
     }
 
     .theback p {
+      -webkit-font-family: 'zilla slab', sans-serif;
+      -webkit-padding: 0 30px 30px 30px;
+      -webkit-font-weight: normal;
+      -webkit-font-size: 12px;
+      -webkit-text-align: center;
+      -moz-font-family: 'zilla slab', sans-serif;
+      -moz-padding: 0 30px 30px 30px;
+      -moz-font-weight: normal;
+      -moz-font-size: 12px;
+      -moz-text-align: center;
+      -ms-font-family: 'zilla slab', sans-serif;
+      -ms-padding: 0 30px 30px 30px;
+      -ms-font-weight: normal;
+      -ms-font-size: 12px;
+      -ms-text-align: center;
       font-family: 'zilla slab', sans-serif;
       padding: 0 30px 30px 30px;
       font-weight: normal;
@@ -118,6 +337,42 @@
     }
 
     .img {
+      -webkit-position: relative;
+      -webkit-top: 0;
+      -webkit-left: 0;
+      -webkit-width: calc(33.3333333333% - 1.5rem);
+      -webkit-border-radius: 10px;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transition: all .5s ease;
+      -webkit-display: grid;
+      -webkit-grid-auto-rows: minmax(0, 1fr);
+      -webkit-margin: .75rem;
+      -webkit-box-shadow: 0 0px 9px rgba(0, 0, 0, calc(2/3));
+      -webkit-cursor: pointer;
+      -moz-position: relative;
+      -moz-top: 0;
+      -moz-left: 0;
+      -moz-width: calc(33.3333333333% - 1.5rem);
+      -moz-border-radius: 10px;
+      -moz-transform-style: preserve-3d;
+      -moz-transition: all .5s ease;
+      -moz-display: grid;
+      -moz-grid-auto-rows: minmax(0, 1fr);
+      -moz-margin: .75rem;
+      -moz-box-shadow: 0 0px 9px rgba(0, 0, 0, calc(2/3));
+      -moz-cursor: pointer;
+      -ms-position: relative;
+      -ms-top: 0;
+      -ms-left: 0;
+      -ms-width: calc(33.3333333333% - 1.5rem);
+      -ms-border-radius: 10px;
+      -ms-transform-style: preserve-3d;
+      -ms-transition: all .5s ease;
+      -ms-display: grid;
+      -ms-grid-auto-rows: minmax(0, 1fr);
+      -ms-margin: .75rem;
+      -ms-box-shadow: 0 0px 9px rgba(0, 0, 0, calc(2/3));
+      -ms-cursor: pointer;
       position: relative;
       top: 0;
       left: 0;
@@ -133,29 +388,52 @@
     }
 
     .img img {
+      -webkit-width: 100%;
+      -webkit-height: 100%;
+      -webkit-border-radius: 10px;
+      -moz-width: 100%;
+      -moz-height: 100%;
+      -moz-border-radius: 10px;
+      -ms-width: 100%;
+      -ms-height: 100%;
+      -ms-border-radius: 10px;
       width: 100%;
       height: 100%;
       border-radius: 10px;
     }
 
     .img:hover {
+      -webkit-transform: scale(1.05);
+      -webkit-box-shadow: 0px 0px 12 rgba(0, 0, 0, 0.75);
+      -moz-transform: scale(1.05);
+      -moz-box-shadow: 0px 0px 12 rgba(0, 0, 0, 0.75);
+      -ms-transform: scale(1.05);
+      -ms-box-shadow: 0px 0px 12 rgba(0, 0, 0, 0.75);
       transform: scale(1.05);
       box-shadow: 0px 0px 12 rgba(0, 0, 0, 0.75);
-      -webkit-transform: scale(1.05);
     }
 
     @media only screen and (max-width: 640px) {
 
       /* For mobile phones */
       .thecard {
+        -webkit-width: calc(100% - 1.5rem) !important;
+        -moz-width: calc(100% - 1.5rem) !important;
+        -ms-width: calc(100% - 1.5rem) !important;
         width: calc(100% - 1.5rem) !important;
       }
 
       .thefront-h1 {
+        -webkit-font-size: 24px;
+        -moz-font-size: 24px;
+        -ms-font-size: 24px;
         font-size: 24px;
       }
 
       .img {
+        -webkit-width: calc(100% - 1.5rem) !important;
+        -moz-width: calc(100% - 1.5rem) !important;
+        -ms-width: calc(100% - 1.5rem) !important;
         width: calc(100% - 1.5rem) !important;
       }
 
@@ -186,7 +464,7 @@
 
       <div class="theback">
         <h1>Shark finning!</h1>
-        <p>Sample Text</p>
+        <p>This is a huge problem because people are wanting their delicate fins for their own wants, not knowing the true impact.</p>
         <p> This information was found <a href="https://www.hsi.org/issues/shark-finning/">here</a>.</p>
       </div>
     </div>
@@ -312,7 +590,8 @@
         <h1>Global Warming!</h1>
         <p>Without sharks there would be an overflow of animals eating to many plants, and releasing tons of carbon
           into our atmosphere.</p>
-        <p> This information was found <a href="https://www.sharksider.com/every-shark-disappeared%E2%80%A8">here</a>.</p>
+        <p> This information was found <a href="https://www.sharksider.com/every-shark-disappeared%E2%80%A8">here</a>.
+        </p>
       </div>
 
     </div>
